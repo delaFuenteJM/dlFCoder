@@ -1,0 +1,26 @@
+//import mixin
+@import "../utilidades/mixin";
+
+/* Estilo mobile index*/
+
+main .gridIndex {
+    @include grid(grid, 1fr, repeat(2, 1fr));
+    column-gap: 4px;
+    row-gap: 8px;
+    .imagenIndex { grid-area: 1 / 1 / 2 / 2; }
+    .descripcionIndex { grid-area: 2 / 1 / 3 / 2; }
+    img {
+        margin: 10px;
+    }
+}
+
+/* Estilos desktop index*/
+@media screen and (min-width: 1024px){
+    main .gridIndex{
+        @include grid(grid, repeat(2, 1fr), 40%);
+        column-gap: 6px;
+        row-gap: 8px;
+        .imagenIndex { grid-area: 1 / 1 / 2 / 2; }
+        .descripcionIndex { grid-area: 1 / 2 / 2 / 3; }
+    }
+}

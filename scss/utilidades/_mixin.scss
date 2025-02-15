@@ -1,0 +1,15 @@
+@mixin diezPx{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+@mixin flexW{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin grid ($grid, $column, $row){
+    display: $grid;
+    grid-template-columns: $column;
+    grid-template-rows: $row;
+}
