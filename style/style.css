@@ -10,6 +10,10 @@
   src: url("../style/Delius,Fleur_De_Leah/#4d354e") format("");
 }
 /* Estilos generales */
+header nav div a img {
+  height: 50px;
+}
+
 body {
   background-color: #a8d6bf;
   font-weight: 400;
@@ -18,14 +22,11 @@ body {
 body h1 {
   color: #4d354e;
   font-family: "Delius", Helvetica, sans-serif;
+  text-align: center;
 }
 
 .navbarColor {
   background-color: #bdc4d8;
-}
-
-#login {
-  background-color: cornsilk;
 }
 
 /* Estilos page singup*/
@@ -117,12 +118,34 @@ footer {
   margin-bottom: auto;
 }
 
+/* estilos de tablet carrito */
+@media screen and (min-width: 600px) {
+  main .mainCarrito {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 4px;
+    row-gap: 4px;
+  }
+  main .mainCarrito .div1 {
+    grid-area: 1/1/2/2;
+  }
+  main .mainCarrito .div2 {
+    grid-area: 1/2/2/3;
+  }
+  main .mainCarrito .div3 {
+    grid-area: 2/1/3/2;
+  }
+  main .mainCarrito .botonCuatro {
+    grid-area: 3/1/4/3;
+  }
+}
 /* estilos de desktop (carrito) */
 @media screen and (min-width: 1024px) {
   main .mainCarrito {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     column-gap: 4px;
     row-gap: 4px;
   }
@@ -157,6 +180,24 @@ main .gridIndex img {
   margin: 10px;
 }
 
+/* estilos de tablet index */
+@media screen and (min-width: 600px) {
+  main .gridIndex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40%;
+    column-gap: 6px;
+    row-gap: 8px;
+  }
+  main .gridIndex .imagenIndex {
+    grid-area: 1/1/2/2;
+    padding: 10px;
+  }
+  main .gridIndex .descripcionIndex {
+    grid-area: 1/2/2/3;
+    padding: 10px;
+  }
+}
 /* Estilos desktop index*/
 @media screen and (min-width: 1024px) {
   main .gridIndex {
@@ -170,6 +211,92 @@ main .gridIndex img {
     grid-area: 1/1/2/2;
   }
   main .gridIndex .descripcionIndex {
+    grid-area: 1/2/2/3;
+  }
+}
+/* estilos de tablet page Producto */
+@media screen and (min-width: 600px) {
+  main .producto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40%;
+    column-gap: 6px;
+    row-gap: 8px;
+  }
+  main .producto .imgGridProducto {
+    grid-area: 1/1/2/2;
+    padding: 10px;
+  }
+  main .producto .descripcionProducto {
+    grid-area: 1/2/2/3;
+    padding: 10px;
+  }
+}
+/* Estilos desktop Page producto*/
+@media screen and (min-width: 1024px) {
+  main .producto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40%;
+    column-gap: 6px;
+    row-gap: 8px;
+  }
+  main .producto .imgGridProducto {
+    grid-area: 1/1/2/2;
+  }
+  main .producto .descripcionProducto {
+    grid-area: 1/2/2/3;
+  }
+}
+/* estilos de tablet page ingreso */
+@media screen and (min-width: 600px) {
+  main .gridIngreso {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40%;
+    column-gap: 6px;
+    row-gap: 8px;
+  }
+  main .gridIngreso #login {
+    grid-area: 1/2/2/3;
+  }
+}
+/* Estilos desktop page ingreso*/
+@media screen and (min-width: 1024px) {
+  main .gridIgreso {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40%;
+    column-gap: 6px;
+    row-gap: 8px;
+  }
+  main .gridIgreso #login {
+    grid-area: 1/2/2/3;
+  }
+}
+/* estilos de tablet page nuevo usuario */
+@media screen and (min-width: 600px) {
+  main #nuevoUser {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    column-gap: 6px;
+    row-gap: 8px;
+  }
+  main #nuevoUser .formularioNuevoUsuario {
+    grid-area: 1/2/2/3;
+  }
+}
+/* Estilos desktop page nuevo usuario*/
+@media screen and (min-width: 1024px) {
+  main #nuevoUser {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    column-gap: 6px;
+    row-gap: 8px;
+  }
+  main #nuevoUser .formularioNuevoUsuario {
     grid-area: 1/2/2/3;
   }
 }
