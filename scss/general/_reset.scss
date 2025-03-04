@@ -15,6 +15,18 @@
     src: url("../style/Delius\,Fleur_De_Leah/#4d354e") format("");
 }
 /* Estilos generales */
+header{
+    nav{
+        div{
+            a{
+                img{
+                    height: 50px;
+                }
+            }
+        }
+    }
+}
+
 body{
     background-color: $color-bodyBg ;
     font-weight: 400;
@@ -22,14 +34,13 @@ body{
     h1{
         color: $color-violet;
         font-family: "Delius", Helvetica, sans-serif;
+        text-align: center;
     }
 }
 .navbarColor{
     background-color: $color-navFootBg;
 }
-#login{
-    background-color: $color-loginBg;
-}
+
 
 /* Estilos page singup*/
 #nuevoUser{

@@ -1,11 +1,26 @@
 //import mixin
 @import "../utilidades/mixin";
 
+/* estilos de tablet carrito */
+
+@media screen and (min-width: 600px) {
+    main .mainCarrito {
+        @include grid(grid, repeat(2, 1fr), repeat(2, 1fr));
+        column-gap: 4px;
+        row-gap: 4px;
+        .div1 { grid-area: 1 / 1 / 2 / 2; }
+        .div2 { grid-area: 1 / 2 / 2 / 3; }
+        .div3 { grid-area: 2 / 1 / 3 / 2; }
+        .botonCuatro { grid-area: 3 / 1 / 4 / 3; }
+    }
+
+}
+
 /* estilos de desktop (carrito) */
 //estilos page carrito
 @media screen and (min-width: 1024px){
     main .mainCarrito {
-        @include grid(grid, repeat(2, 1fr), repeat(3, 1fr));
+        @include grid(grid, repeat(2, 1fr), repeat(2, 1fr));
         column-gap: 4px;
         row-gap: 4px;
         .div1 { grid-area: 1 / 1 / 2 / 2; }

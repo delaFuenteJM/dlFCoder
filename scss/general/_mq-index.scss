@@ -14,7 +14,21 @@ main .gridIndex {
     }
 }
 
+/* estilos de tablet index */
+
+@media screen and (min-width: 600px) {
+    main .gridIndex{
+        @include grid(grid, repeat(2, 1fr), 40%);
+        column-gap: 6px;
+        row-gap: 8px;
+        .imagenIndex { grid-area: 1 / 1 / 2 / 2; 
+                       padding: 10px;}
+        .descripcionIndex { grid-area: 1 / 2 / 2 / 3;
+        padding: 10px; }
+    }
+}
 /* Estilos desktop index*/
+
 @media screen and (min-width: 1024px){
     main .gridIndex{
         @include grid(grid, repeat(2, 1fr), 40%);

@@ -1,0 +1,27 @@
+//import mixin
+@import "../utilidades/mixin";
+
+/* estilos de tablet page Producto */
+
+@media screen and (min-width: 600px) {
+    main .producto{
+        @include grid(grid, repeat(2, 1fr), 40%);
+        column-gap: 6px;
+        row-gap: 8px;
+        .imgGridProducto { grid-area: 1 / 1 / 2 / 2; 
+                       padding: 10px;}
+        .descripcionProducto { grid-area: 1 / 2 / 2 / 3;
+        padding: 10px; }
+    }
+}
+/* Estilos desktop Page producto*/
+
+@media screen and (min-width: 1024px){
+    main .producto{
+        @include grid(grid, repeat(2, 1fr), 40%);
+        column-gap: 6px;
+        row-gap: 8px;
+        .imgGridProducto { grid-area: 1 / 1 / 2 / 2; }
+        .descripcionProducto { grid-area: 1 / 2 / 2 / 3; }
+    }
+}

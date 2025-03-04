@@ -1,0 +1,24 @@
+//import mixin
+@import "../utilidades/mixin";
+
+
+/* estilos de tablet page ingreso */
+
+@media screen and (min-width: 600px) {
+    main .gridIngreso{
+        @include grid(grid, repeat(3, 1fr), 40%);
+        column-gap: 6px;
+        row-gap: 8px;
+        #login { grid-area: 1 / 2 / 2 / 3;}
+    }
+}
+/* Estilos desktop page ingreso*/
+
+@media screen and (min-width: 1024px){
+    main .gridIgreso{
+        @include grid(grid, repeat(3, 1fr), 40%);
+        column-gap: 6px;
+        row-gap: 8px;
+        #login { grid-area: 1 / 2 / 2 / 3;} 
+    }
+}
